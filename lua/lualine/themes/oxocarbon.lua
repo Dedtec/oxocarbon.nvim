@@ -1,5 +1,5 @@
 local colors = {
-	blue = "#33b1ff",
+	blue = "#78a9ff",
 	green = "#3ddbd9",
 	magenta = "#be95ff",
 	red = "#ee5396",
@@ -13,7 +13,7 @@ local colors = {
 return {
 	normal = {
 		a = { fg = colors.bg, bg = colors.blue },
-		b = { fg = colors.fg, bg = colors.none },  -- fg=colors.blue, bg=colors.gray
+		b = { fg = colors.blue, bg = colors.none },  -- fg=colors.blue, bg=colors.gray
 		c = { fg = colors.fg, bg = colors.none },
 	},
 	insert = { a = { fg = colors.bg, bg = colors.green }, b = { fg = colors.green, bg = colors.none } },

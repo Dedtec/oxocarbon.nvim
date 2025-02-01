@@ -1,3 +1,29 @@
-local oxocarbon = (require("oxocarbon")).oxocarbon
-local colors = {color0 = oxocarbon.base02, color1 = oxocarbon.base10, color2 = oxocarbon.base08, color3 = oxocarbon.base00, color6 = oxocarbon.base04, color7 = oxocarbon.base09, color8 = oxocarbon.base14, color9 = oxocarbon.base12, color10 = oxocarbon.base13}
-return {replace = {a = {fg = colors.color0, bg = colors.color1}, b = {fg = colors.color2, bg = colors.color3}}, inactive = {a = {fg = colors.color0, bg = colors.color7}, b = {fg = colors.color6, bg = colors.color3}, z = {fg = colors.color0, bg = colors.color3}}, normal = {a = {fg = colors.color0, bg = colors.color7}, b = {fg = colors.color6, bg = colors.color3}, c = {fg = colors.color6, bg = colors.color3}, z = {fg = colors.color6, bg = colors.color3}}, visual = {a = {fg = colors.color0, bg = colors.color8}, b = {fg = colors.color6, bg = colors.color3}, y = {fg = colors.color6, bg = colors.color3}, z = {fg = colors.color9, bg = colors.color3}}, insert = {a = {fg = colors.color0, bg = colors.color9}, b = {fg = colors.color6, bg = colors.color3}, z = {fg = colors.color9, bg = colors.color3}}, command = {a = {fg = colors.color0, bg = colors.color10}}}
+local colors = {
+	blue = "#78a9ff",
+	green = "#3ddbd9",
+	magenta = "#be95ff",
+	red = "#ee5396",
+	yellow = "#FF6F00",
+	fg = "#525252",
+	bg = "#131313 ",
+	gray = "#37474F",
+  none = "NONE"
+}
+-- LuaFormatter on
+return {
+	normal = {
+		a = { fg = colors.bg, bg = colors.blue },
+		b = { fg = colors.blue, bg = colors.none },  -- fg=colors.blue, bg=colors.gray
+		c = { fg = colors.fg, bg = colors.none },
+	},
+	insert = { a = { fg = colors.bg, bg = colors.green }, b = { fg = colors.green, bg = colors.none } },
+	visual = { a = { fg = colors.bg, bg = colors.magenta }, b = { fg = colors.magenta, bg = colors.none } },
+	command = { a = { fg = colors.bg, bg = colors.yellow }, b = { fg = colors.yellow, bg = colors.none } },
+	replace = { a = { fg = colors.bg, bg = colors.red }, b = { fg = colors.red, bg = colors.none } },
+
+	inactive = {
+		a = { bg = colors.bg, fg = colors.blue },
+		b = { bg = colors.none, fg = colors.gray, gui = "bold" },
+		c = { bg = colors.none, fg = colors.gray },
+	},
+}
